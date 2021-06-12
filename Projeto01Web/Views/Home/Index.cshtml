@@ -1,0 +1,77 @@
+﻿
+@model Projeto01Web.Models.Produto
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cadastro de Produto</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true);
+
+    <fieldset>
+        <legend>Informações do Produto</legend>
+
+        <!-- Input Código -->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Codigo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Codigo)
+            @Html.ValidationMessageFor(model => model.Codigo)
+        </div>
+
+        <!-- Input Nome -->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <!-- Input Descrição -->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Descricao)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Descricao)
+            @Html.ValidationMessageFor(model => model.Descricao)
+        </div>
+
+        <!-- Input Peso -->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Peso)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Peso)
+            @Html.ValidationMessageFor(model => model.Peso)
+        </div>
+
+        <!-- Input Categoria -->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Categoria)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Categoria)
+            @Html.ValidationMessageFor(model => model.Categoria)
+        </div>
+
+        <!-- Input ValorUnit -->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ValorUnit)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ValorUnit)
+            @Html.ValidationMessageFor(model => model.ValorUnit)
+        </div>
+
+        <!-- Botão Cadastrar -->
+        <p><input type="submit" value="Cadastrar" /></p>
+    </fieldset>
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

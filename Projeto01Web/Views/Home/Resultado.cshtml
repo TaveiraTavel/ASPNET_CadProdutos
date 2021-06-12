@@ -1,0 +1,41 @@
+﻿
+@model Projeto01Web.Models.Produto
+
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Listar Cadastro</h2>
+<fieldset>
+    <legend>Produto Recém-Cadastrado</legend>
+
+    <dl class="dl-horizontal">
+        <!-- Output Código -->
+        <dt>@Html.DisplayNameFor(model => model.Codigo)</dt>
+        <dd>@Html.DisplayFor(model => model.Codigo)</dd>
+
+        <!-- Output Nome -->
+        <dt>@Html.DisplayNameFor(model => model.Nome)</dt>
+        <dd>@Html.DisplayFor(model => model.Nome)</dd>
+
+        <!-- Output Descrição -->
+        <dt>@Html.DisplayNameFor(model => model.Descricao)</dt>
+        <dd>@Html.DisplayFor(model => model.Descricao)</dd>
+
+        <!-- Output Peso -->
+        <dt>@Html.DisplayNameFor(model => model.Peso)</dt>
+        <dd>@Html.DisplayFor(model => model.Peso) Kg</dd>
+
+        <!-- Output Categoria -->
+        <dt>@Html.DisplayNameFor(model => model.Categoria)</dt>
+        <dd>@Html.DisplayFor(model => model.Categoria)</dd>
+
+        <!-- Output ValorUnit -->
+        <dt>@Html.DisplayNameFor(model => model.ValorUnit)</dt>
+        <dd>R$@Html.DisplayFor(model => model.ValorUnit)</dd>
+    </dl>
+</fieldset>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
